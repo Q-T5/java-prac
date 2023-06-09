@@ -1,0 +1,21 @@
+ARRAY LISTS VS LINKED LISTS
+- both structures implement the List interface, and maintain insertion order
+- both are non-synced
+
+DIFFERENCES
+- AL use dynamic arrays to store elements, LL use doubly-linked lists to store the elements
+- manipulationg AL is slow because the underlying structure is an array(if any element is removed
+  from the array, all the elements are shifted in memory), LL are faster(because it relies on doubly-linked lists
+  so no shifting is required in memory)
+- AL behaves as lists only, because they only implement the List interface, LL can act both as lists and queues because they
+  implement both List and Deque interfaces
+- AL is better for STORING AND ACCESSING DATA. LL is better for MANIPULATING DATA
+- memory locations for AL elements are contigous, while those of LL is no-contigous
+- AL have a default initial capacity of 10, while LL have no initial size when they are created(they are empty)
+- basically, an AL is a resizable array, while a LL implements the doubly-linked list of the List interface
+
+WHEN TO USE ARRAY LISTS VS LINKED LISTS
+1) When the rate of addition/ removal exceeds the rate of reading opperations, use a LL, else use an AL
+2) When considering cache-efficiency, use an AL, as its elements are closely packed
+3) Memory usage in an LL is more than in an AL, because more memory slots are required to house the links between
+   nodes(for each node, there is a previous and next link to the previous and next node respectively)
